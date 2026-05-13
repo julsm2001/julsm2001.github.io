@@ -913,7 +913,7 @@ button.footer-link {
   .tool-info p { font-size: .78rem; }
 
   /* IA & Tech */
-  .ia-card { padding: 1.5rem; gap: 2rem; }
+  .ia-card { grid-template-columns: 1fr; padding: 1.5rem; gap: 2rem; }
   .ia-text h3 { font-size: clamp(1.2rem, 5vw, 1.6rem); }
   .ia-text p { font-size: .9rem; }
   .tech-grid { max-width: 260px; margin: 1.5rem auto 0; gap: 8px; }
@@ -948,6 +948,6 @@ button.footer-link {
   .tech-logo { width: 22px; height: 22px; }
   .tech-card span { font-size: .5rem; }
 
-  .ia-card { padding: 1.25rem; }
+  .ia-card { grid-template-columns: 1fr; padding: 1.25rem; }
   .tool-icon { width: 36px; height: 36px; }
 }
