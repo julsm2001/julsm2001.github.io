@@ -106,3 +106,38 @@ function initSmoothScroll() {
     });
   });
 }
+
+/* ── Copy email to clipboard ──────────────────────────────────── */
+function copyEmail() {
+  const email = 'julian.machuca2001@gmail.com';
+  navigator.clipboard.writeText(email).then(() => {
+    // Update button text
+    const span = document.getElementById('emailText');
+    span.textContent = '¡Copiado!';
+    setTimeout(() => { span.textContent = 'Email'; }, 2000);
+
+    // Show toast
+    showToast('📧 ' + email + ' copiado al portapapeles');
+  });
+}
+
+function showToast(message) {
+  // Remove existing toast
+  const existing = document.querySelector('.toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  // Trigger animation
+  requestAnimationFrame(() => {
+    toast.classList.add('toast--visible');
+  });
+
+  setTimeout(() => {
+    toast.classList.remove('toast--visible');
+    setTimeout(() => toast.remove(), 400);
+  }, 2500);
+}
