@@ -609,6 +609,7 @@ img { display:block; max-width:100%; }
   align-items: center;
   justify-content: center;
   position: relative;
+  width: 100%;
 }
 
 .tech-grid {
